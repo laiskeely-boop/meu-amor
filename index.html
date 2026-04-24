@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Meu amor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    text-align: center;
+    color: #333;
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #ff4d6d;
+  }
+
+  h2 {
+    color: #ff4d6d;
+  }
+
+  .card {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+    margin: 10px auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  #contador {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ff4d6d;
+  }
+
+  button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ff1a4d;
+  }
+</style>
+
+</head>
+
+<body>
+
+<section>
+  <h1>Feliz 1 ano, meu amor ❤️</h1>
+  <p>Desde 11/06/2025...</p>
+  <div id="contador"></div>
+</section>
+
+<section>
+  <h2>O começo de tudo 💕</h2>
+  <div class="card">
+    <p>
+      Eu nunca vou esquecer o dia que tudo começou…  
+      foi quando eu comecei a me apaixonar por você.
+    </p>
+    <p>
+      Você foi um verdadeiro príncipe no meu primeiro beijo  
+      e ali eu já senti que você era especial.
+    </p>
+    <p>
+      Você sabe que eu nunca fui de confiar nas pessoas,  
+      mas com você sempre foi diferente…  
+      eu nunca tive isso com ninguém.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Sobre você 😄</h2>
+  <div class="card">
+    <p>
+      Você consegue ser a pessoa mais engraçada  
+      e ao mesmo tempo a mais incrível que eu conheço.
+    </p>
+    <p>
+      Tem o maior coração do mundo…  
+      e é por isso que eu me apaixono mais por você todos os dias.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>O que eu sinto 💘</h2>
+  <div class="card">
+    <p>
+      Você sempre me faz sentir muito amada…
+    </p>
+    <p>
+      Eu amo muito você.  
+      Amo ser sua namorada  
+      e amo fazer parte da sua vida.
+    </p>
+    <p>
+      Eu sou muito feliz com você 💖
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Nossos momentos 📸</h2>
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+</section>
+
+<section>
+  <h2>Uma última coisa... 👀</h2>
+  <button onclick="mostrarMensagem()">Clica aqui 😄</button>
+  <p id="mensagem" style="display:none; font-size:20px; margin-top:20px;">
+    promete continuar sendo o amor da minha vida e me fazendo rir sempre? ❤️
+  </p>
+</section>
+
+<script>
+function mostrarMensagem() {
+  document.getElementById("mensagem").style.display = "block";
+}
+
+function atualizarContador() {
+  const inicio = new Date("2025-06-11T00:00:00");
+  const agora = new Date();
+
+  let diff = agora - inicio;
+
+  let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  let minutos = Math.floor((diff / (1000 * 60)) % 60);
+  let segundos = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("contador").innerHTML =
+    dias + " dias, " +
+    horas + " horas, " +
+    minutos + " minutos e " +
+    segundos + " segundos juntos 💖";
+}
+
+window.onload = function() {
+  atualizarContador();
+  setInterval(atualizarContador, 1000);
+};
+</script>
+
+</body>
+</html>
